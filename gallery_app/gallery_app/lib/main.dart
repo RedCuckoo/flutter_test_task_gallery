@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gallery App',
       home: HomePage(),
+      theme: ThemeData(accentColor: Colors.black),
     );
   }
 }

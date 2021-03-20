@@ -1,6 +1,6 @@
-//import 'package:flutter/foundation.dart';
+import 'package:flutter/cupertino.dart';
 
-class ImageEntity{
+class ImageEntity {
   final String id;
   final String title;
   final String description;
@@ -8,19 +8,22 @@ class ImageEntity{
   final String thumb;
   final String url;
 
-//TODO: add required
-  ImageEntity({ this.id, this.title, this.description,
-       this.author, this.thumb, this.url});
+  ImageEntity(
+      {@required this.id,
+        @required this.title,
+        @required this.description,
+        @required this.author,
+        @required this.thumb,
+        @required this.url});
 
-  factory ImageEntity.fromJSON(Map<String, dynamic> json){
+  factory ImageEntity.fromJSON(Map<String, dynamic> json) {
     return ImageEntity(
-      id: json['id'],
-      title: json['description'],
-      description: json['alt_description'],
-      author: json['user']['name'],
-      thumb: json['urls']['thumb'],
-      url: json['urls']['raw']
-    );
+        id: json['id'],
+        title: json['description'],
+        description: json['alt_description'],
+        author: json['user']['name'],
+        thumb: json['urls']['thumb'],
+        url: json['urls']['raw']);
   }
 
   @override
