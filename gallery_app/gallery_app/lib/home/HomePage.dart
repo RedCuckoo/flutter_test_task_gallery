@@ -46,6 +46,7 @@ class _HomePageState extends State<HomePage> {
               fontSize: 20,
             ),
           )),
+          backgroundColor: Colors.black,
         ),
         body: ListView.builder(
           itemCount: images.length + 1,
